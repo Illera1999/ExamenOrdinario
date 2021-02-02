@@ -1,6 +1,5 @@
 package examenordinario.control;
 
-import examenordinario.app.implementations.MFilmLoader;
 import examenordinario.model.Film;
 import examenordinario.view.FilmDisplay;
 import java.util.HashMap;

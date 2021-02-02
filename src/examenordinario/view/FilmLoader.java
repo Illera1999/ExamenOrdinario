@@ -9,4 +9,5 @@ public interface FilmLoader {
     List <Film> loadGenre();
     List <Film> loadYear();
     List <Film> loadQualification();
+    List <Film> loadViewers();
 }

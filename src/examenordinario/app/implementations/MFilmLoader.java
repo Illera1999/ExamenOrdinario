@@ -16,9 +16,9 @@ public class MFilmLoader implements FilmLoader{
         actors.add("Marcos");
         actors.add("Ana");
         actors.add("Jaime");
-        list.add(new Film("Ladrón en casa 1","Cómedia",2018,actors,9,120));
-        list.add(new Film("Ladrón en casa 2","Suspense",2019,actors,6,150));
-        list.add(new Film("Ladrón en casa 3","Acción",2020,actors,10,130));
+        list.add(new Film("Ladrón en casa 1","Cómedia",2018,actors,9,120,10000));
+        list.add(new Film("Ladrón en casa 2","Suspense",2019,actors,6,150,100000));
+        list.add(new Film("Ladrón en casa 3","Acción",2020,actors,10,130,10000000));
         return list;
     }
 
@@ -60,6 +60,20 @@ public class MFilmLoader implements FilmLoader{
                 else{return 0;}
            }
         });
+        return film;
+    }
+    
+    @Override
+    public List<Film> loadViewers() {
+        List <Film> film = this.load();
+        Collections.sort(film, new Comparator<Film>(){
+        @Override
+        public int compare(Film o1, Film o2) {
+           if(o1.getViewers()<o2.getViewers()){return 1;}
+           else if(o1.getViewers()>o2.getViewers()){return -1;}
+           else{return 0;}
+        }
+         });
         return film;
     }
    

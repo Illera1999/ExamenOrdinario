@@ -10,14 +10,16 @@ public class Film implements Comparable<Film>{
     private int year;
     private int qualification;
     private int duration;
+    private int viewers;
 
-    public Film(String name, String genre, int year, List<String> actors, int qualification, int duration) {
+    public Film(String name, String genre, int year, List<String> actors, int qualification, int duration,int viewers) {
         this.name = name;
         this.genre = genre;
         this.year = year;
         this.actors = actors;
         this.qualification = qualification;
         this.duration = duration;
+        this.viewers=viewers;
     }
 
     public String getName() {
@@ -42,6 +44,10 @@ public class Film implements Comparable<Film>{
 
     public int getDuration() {
         return duration;
+    }
+
+    public int getViewers() {
+        return viewers;
     }
     
     @Override

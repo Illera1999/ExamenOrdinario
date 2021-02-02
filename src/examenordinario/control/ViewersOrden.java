@@ -6,12 +6,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class YearOrden implements Command{
+public class ViewersOrden implements Command{
     private final Map<String,Command> commands = new HashMap<>();
     private final List <Film> film;
     private final FilmDisplay filmDisplay;
 
-    public YearOrden(List<Film> film, FilmDisplay filmDisplay) {
+    public ViewersOrden(List<Film> film, FilmDisplay filmDisplay) {
         this.film = film;
         this.filmDisplay = filmDisplay;
     }

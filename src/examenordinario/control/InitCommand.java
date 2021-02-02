@@ -25,6 +25,7 @@ public class InitCommand implements Command{
         commands.put("GENRE", new GenreOrden(new MFilmLoader().loadGenre(),filmDisplay));
         commands.put("YEAR", new YearOrden(new MFilmLoader().loadYear(),filmDisplay));
         commands.put("QUALIFICATION", new QualificationOrden(new MFilmLoader().loadQualification(),filmDisplay));
+        commands.put("VIEWERS", new ViewersOrden(new MFilmLoader().loadViewers(),filmDisplay));
         commands.put("EXIT", new ExitCommand());
     }
 

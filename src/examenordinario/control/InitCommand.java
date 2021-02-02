@@ -22,10 +22,10 @@ public class InitCommand implements Command{
         for (Film film1 : film) {
             filmDisplay.display(film1);
         }
-        commands.put("Por genero", new GenreOrden(new MFilmLoader().loadGenre(),filmDisplay));
-        commands.put("Por actualidad", new YearOrden(new MFilmLoader().loadYear(),filmDisplay));
-        commands.put("Por valoración", new QualificationOrden(new MFilmLoader().loadQualification(),filmDisplay));
-        commands.put("Salir", new ExitCommand());
+        commands.put("GENRE", new GenreOrden(new MFilmLoader().loadGenre(),filmDisplay));
+        commands.put("YEAR", new YearOrden(new MFilmLoader().loadYear(),filmDisplay));
+        commands.put("QUALIFICATION", new QualificationOrden(new MFilmLoader().loadQualification(),filmDisplay));
+        commands.put("EXIT", new ExitCommand());
     }
 
     public Map<? extends String, ? extends Command> getCommand() {

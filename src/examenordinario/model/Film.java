@@ -2,7 +2,7 @@ package examenordinario.model;
 
 import java.util.List;
 
-public class Film {
+public class Film implements Comparable<Film>{
 
     private String name;
     private String genre;
@@ -44,7 +44,27 @@ public class Film {
         return duration;
     }
     
-    
-    
+    @Override
+    public boolean equals(Object b){
+        if(b instanceof Film){
+            Film nuevo = (Film) b;
+            if (this.name.equals(((Film) b).name)){return true;}
+        }
+        return false;
+    }
+
+    @Override
+    public int compareTo(Film o) {
+        if(this.name.compareTo(o.name)>0){return 1;}
+        else if(this.name.compareTo(o.name)<0){return -1;}
+        else if(this.name.compareTo(o.name)==0){
+            if(this.genre.compareTo(o.genre)>0){return 1;}
+            else if(this.genre.compareTo(o.genre)<0){return -1;}
+            else if(this.genre.compareTo(o.genre)==0){
+                return 0;
+            }
+        }
+        return 0;
+    }
     
 }
